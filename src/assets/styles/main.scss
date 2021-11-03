@@ -1,0 +1,55 @@
+.custom-input {
+  width: 100%;
+  letter-spacing: 0.0168em;
+  border-radius: $border-radius;
+  border: 1px solid $stroke;
+  color: $dark-gray;
+  transition: all 0.3s ease;
+  padding: 5px 14px;
+  font-size: 14px;
+
+  &:hover {
+    border: 1px solid $gray;
+  }
+
+  &::placeholder {
+    transition: all 0.3s ease;
+    color: $gray;
+  }
+
+  &:focus {
+    border-color: $stroke;
+    outline: 0;
+    box-shadow: 0 0 0 2px fade($gray, 30%);
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+
+  &.invalid {
+    border-color: $primary;
+  }
+
+  &_lg {
+    font-size: 16px;
+    padding: 15px 16px 14px;
+    border-radius: 10px;
+    margin-top: 8px;
+  }
+
+  &_disabled {
+    opacity: 0.3;
+    &:hover {
+      border: 1px solid $stroke;
+    }
+  }
+
+  &__calendar {
+    background: 97% no-repeat url("../icons/calander.svg");
+    cursor: pointer;
+    &:focus {
+      box-shadow: 0 0 0 1px fade($gray, 30%);
+    }
+  }
+}

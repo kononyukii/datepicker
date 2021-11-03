@@ -1,0 +1,71 @@
+@import '../../assets/styles/variables.scss';
+
+.datepicker {
+  position: relative;
+  width: 100%;
+}
+
+.calendar {
+  position: absolute;
+  width: 100%;
+  padding: 8px;
+  top: 31px;
+  left: 0;
+  background-color: $light;
+  color: $black;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__day {
+    width: calc(100% / 7);
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__day-name {
+    font-weight: 500;
+
+    &.weekend {
+      color: $primary;
+    }
+  }
+
+  &__header {
+    width: 100%;
+    height: 54px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    border-bottom: 1px dotted $stroke;
+  }
+
+  &__arrow {
+    cursor: pointer;
+  }
+}
+
+.selected {
+  width: calc(100% / 7);
+  background: $primary;
+  color: $light;
+  font-weight: 500;
+  border-radius: $border-radius;
+}
+
+.today {
+  width: calc(100% / 7);
+  border: 1px solid $primary;
+  border-radius: $border-radius;
+}
+
+.before {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
